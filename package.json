@@ -1,0 +1,15 @@
+{
+  "name": "apprend-proxy",
+  "version": "1.0.0",
+  "description": "A simple http proxy based on CORS-Proxy",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Alan Languirand",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.12.3",
+    "yelp": "^0.2.0"
+  }
+}
