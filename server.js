@@ -20,7 +20,8 @@ app.get("/search", function(req, res, next){
   // See http://www.yelp.com/developers/documentation/v2/search_api
   yelp.search(req.query, function(error, data) {
     if(error){ res.status(400).send(error); }
-    res.status(200).send(data);
+    else { res.status(200).send(data); }
+    next();
   });
 
 })
@@ -30,7 +31,8 @@ app.get("/business/:id", function(req, res, next){
   // See http://www.yelp.com/developers/documentation/v2/business
   yelp.business(req.params.id, function(error, data) {
     if(error){ res.status(400).send(error); }
-    res.status(200).send(data);
+    else { res.status(200).send(data); }
+    next();
   });
 
 });
