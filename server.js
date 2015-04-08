@@ -9,6 +9,12 @@ var yelp = require("yelp").createClient({
   token_secret: process.env.TOKEN_SECRET
 });
 
+
+app.use("/", function(req, res, next) {
+  // Null allows access from "file:///" urls. Set to your own domain to prevent abuse
+  res.status(200).send("See <a href='https://github.com/apprend/yelp'>github.com/apprend/yelp</a> for usage instructions.");
+});
+
 app.use(function(req, res, next) {
   // Null allows access from "file:///" urls. Set to your own domain to prevent abuse
   res.set('Access-Control-Allow-Origin', 'null');
