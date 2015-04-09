@@ -11,7 +11,7 @@ var yelp = require("yelp").createClient({
 
 app.use(function(req, res, next) {
   // Null allows access from "file:///" urls. Set to your own domain to prevent abuse
-  res.set('Access-Control-Allow-Origin', 'null');
+  res.set('Access-Control-Allow-Origin', '*');
   next();
 });
 
